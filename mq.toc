@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Bibliografia}{3}
+\contentsline {section}{\numberline {2}Problemi della fisica classica}{3}
+\contentsline {section}{\numberline {3}Problema del Corpo Nero}{4}
+\contentsline {subsection}{\numberline {3.1}Calcolini}{4}
+\contentsline {paragraph}{Esercizio}{5}
+\contentsline {paragraph}{Esercizio: fluttuazioni di energia}{6}
+\contentsline {subparagraph}{Alte T}{6}
+\contentsline {subparagraph}{Basse T}{7}
+\contentsline {subsection}{\numberline {3.2}Effetto Fotoelettrico}{7}
+\contentsline {subsection}{\numberline {3.3}Effetto Compton}{7}
+\contentsline {subsection}{\numberline {3.4}Esperimento di Nichols Hull}{7}
+\contentsline {subsection}{\numberline {3.5}De Broglie}{8}
+\contentsline {subsection}{\numberline {3.6}Stabilit\IeC {\`a} dell'atomo}{8}

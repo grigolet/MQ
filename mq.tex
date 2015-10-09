@@ -1,0 +1,300 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\author{Gianluca rigoletti}
+\title{Appunti Meccanica Quantistica}
+\begin{document}
+
+
+\title{Appunti di meccanica quantistica}
+\maketitle
+\newpage
+
+\tableofcontents
+
+\newpage
+\section{Bibliografia}
+Testi consigliati dal docente:
+\begin{itemize}
+\item Stephen Gasiorowicz - Quantum Physics
+\item Cohen
+\item Feynman
+\item Griffith
+\end{itemize}
+
+\section{Problemi della fisica classica}
+Verso le metà e la fine dell'ottocento si pensava che le tre branche principali della fisica, ovvero la meccanica, la termodinamica e l'elettromagnetismo, fossero sufficienti a descrivere tutti i fenomeni dell'universo. Per la meccanica classica, già Laplace, illuminista, descrisse come un ente in che conosca la posizione di tutte le particelle in un dato istante e le loro interazioni, sia in grado di prevedere il futuro dello stato  delle particelle. Sempre in piena età illuministà si pensava che valesse la reversibilità per qualsiasi fenomeno fisico. Per quanto riguarda l'elettromagnetismo e la luce, dal 600 all'800 Si affermo la visione ondulatoria dek fenomeni ottici (grazie a Huygens principalmente).
+
+Dalle equazioni di Maxwell era noto che la luce come fenomeno dovesse avere una velocità:
+
+\begin{equation}
+c^2 = \frac{1}{\mu_o \epsilon_o}
+\end{equation}
+
+il problema che sorge è capire cosa si intende quando si parla di velocità dell'onda. Infatti, se pensiamo al suono come un'onda sappiamo che la sua velocità nell'aria è circa $340 m s^{-1}$ mentre nell'acqua è 4 volte superiore. Per la luce la questione è più delicata, in quanto l'onda si propaga anche tra distanze astronomiche in cui non v'è altro che  il vuoto. Si pensò all'etere come mezzo di propagazione della luce, ma l'esperimento di Michelson Morley confermò la non esistenza di tale mezzo. Nel 1905 Einstein propose la teoria della relatività speciale in cui stabili i due postulati:
+
+\begin{enumerate}
+\item
+La velocità della luce è $c$ ed è la stessa in ogni sistema di riferimento inerziale
+\item
+Le leggi della fisica sono invarianti per ogni trasformazione di Lorentz
+\end{enumerate}
+
+Sembrerebbe tutto risolto con la relatività e la natura ondulatoria della luce. In realtà non fu così.
+
+\section{Problema del Corpo Nero}
+
+Il corpo nero è un modello fisico/matematico dotato di alcune proprietà interessanti. Un corpo nero per definizione è un corpo in equilibrio termodinamico con la radiazione su di esso incidente. Tutta la radiazione che assorbe la riemette. Lo spettro (l'insieme delle frequenza delle radiazioni emesse) è continuo.
+Era inoltre nota una legge fenomenologica:
+
+\begin{equation}
+\lambda_{max}T = cost
+\end{equation}
+
+cioè tutti i corpi neri che hanno lo stesso picco $ \lambda_{max} $ hanno le stesse caratteristiche, indipendenti dai dettagli di cui sono costituiti.
+
+\subsection{Calcolini}
+Immagino una cavità cubica di lato $ L $ in cui le onde elettromagnetiche assumono un comportamento di onde stazionarie all'interno della cavità. Per le onde stazionarie vale
+
+\begin{align}
+& \lambda = \frac{2L}{n} \\ \nonumber
+& \nu = \frac{c}{\lambda} \\ \nonumber
+& \nu = \frac{n}{2L} c
+\end{align}
+
+Calcoliamo la spaziatura, in termini di frequenza, tra un modo $ n $ e il suo successivo $ n + 1 $:
+
+\begin{align}
+\Delta\lambda_{n+1}-\Delta\lambda_{n} = \frac{c}{2L} (n+1-n) = \frac{c}{2L}
+\end{align}
+
+Posso inoltre calcolare il numero di modi presenti in un intervallo $ d\nu $ di frequenza:
+
+\begin{equation}
+n = \frac{2L}{c} d\nu
+\end{equation}
+
+Dalle osservazioni dello spettro nero in funzione dell frequenza, Rayleigh e Jeans notano la somiglianza con una maxwelliana, come nelle distribuzioni di velocità delle particelle. Per ricavare la Maxwelliana si utilizza il toerema di equipartizione dell'energia e di conseguenza anche loro pensano di utilizzarlo, assegnando ad ogni modo dell'oscillatore un energia $ kT $. In una cavità tridimensionale bisogna immaginare l'onda oscillante lungo i tre assi cartesiani e avente quindi un numero di modi $ n_x, n_y, n_z $. Generalizzando il concetto ottengo che.
+
+\begin{equation}
+\nu = \sqrt{n_x^2 + n_y^2 + n_z^2}\frac{c}{2L} \qquad \Rightarrow \qquad n_x^2 + n_y^2 + n_z^2 = \frac{4\nu^2L^2}{c^2}
+\end{equation}
+
+Bisogna immaginare di avere un raggio del numero di modi (effettivamente è un'astrazione un po' strana ma guardando i conti ci si può rendere conto) di cui posso calcolare il volume di un ottante. Non calcolo il volume della sfera, ma di un ottante, perchè $ n_x, n_y, n_z $ assumono solo valori positivi.
+
+\begin{equation}
+N = \frac{1}{8} \frac{4}{3} \pi r^3 = \frac{1}{8} \frac{4}{3} \pi (\sqrt{n_x^2 + n_y^2 + n_z^2})^3 = \frac{1}{8} \frac{4}{3} \pi \left( \frac{2L\nu}{c} \right)^3
+\end{equation}
+
+C'è inoltre da tenere conto di un fattore 2, dovuto al fatto che lungo una direzione il campo elettromagnetico può essere polarizzato in due modi:
+
+\begin{equation}
+N_{corretto} = 2 N  = \left( \frac{2L}{\nu} \right)^3 \pi \ continua...
+\end{equation}
+
+Il modello funziona bene per le basse frequenze, ma la previsione si discosta nel campo dell'ultravioletto. A descrivere il comportamento per basse lunghezza d'onda c'era la legge di Wien, una legge sperimentale, per cui la densità di energia  avesse un andamento del tipo
+
+\begin{equation}
+u(\nu,T) \propto e^{(-\alpha \nu /  T)}
+\end{equation}
+
+Inoltre, era nota la formula di Stefan per cui l'emittanza di un corpo nero vale:
+
+\begin{equation}
+q = \sigma T^4
+\end{equation}
+
+Oppure:
+
+\begin{equation}
+\int_{0}^{\nu}u(\nu,T) d\nu = \sigma T^4
+\end{equation}
+
+
+Se dentro quest'ultima formula si sostituisce il valore di $ u(\nu,t) $ ricavato da Rayleigh-Jeans si ottiene un integrale che diverge a $ \infty $
+
+\paragraph{Esercizio}
+
+Giochino sulle quantità dimensionali. Nel corpo nero la mia teoria ha dei parametri fondamentali in questione, che sono
+\begin{equation}
+\nu \qquad T \qquad c \qquad k_B
+\end{equation}
+So che $ k_B T $ è un'energia e so che
+\begin{equation}
+\left[ \frac{\nu^3}{c^3} \right] = [L]^{-3} = [V]^{-1}
+\end{equation}
+Posso quindi calcolare dimensionalmente il valore di $ u $ come:
+\begin{equation}
+[u] = \left[ \frac{E}{V} \right]  = \frac{k_B T \nu^3}{c^3}
+\end{equation}
+e si può osservare che, a meno di coefficienti si ottiene la formula di Rayleigh Jeans.
+
+Planck ipotizza che l'energia scambiata $ E_n $ per ogni modo fosse scambiata in quantità discrete:
+
+\begin{equation}
+E_n = nh\nu
+\end{equation}
+
+Con le dovute manipolazioni si ottiene:
+
+\begin{equation}
+u(\nu,T)d\nu = \frac{8\pi h \nu^3}{c^3} \frac{h\nu}{{e^h\nu/kT}-1}
+\end{equation} 
+Facendo i limiti per $ T \rightarrow 0 $ e per $ T \rightarrow \infty $ ritrovo le leggi di Wien e di RJ.
+Torna anche la legge di Stefan. L'integrale non diverge ma
+
+\begin{equation}
+\int u d\nu = \frac{8\pi h}{c^3} \left(\frac{kT}{h}\right)^4 \frac{\pi^4}{15} = \sigma T^4
+\end{equation}
+Cos'è successo fisicamente?
+(Da fare)
+
+\paragraph{Esercizio: fluttuazioni di energia}
+
+In un sistema a temperatura T in equilibrio con l'ambiente,  le fluttuazioni dell'energia intorno al valor medio si calcolano come (formula ricavabile dalla termodinamica):
+
+\begin{equation}
+\Delta E^2 = \frac{\partial E}{\partial \beta} \qquad \beta:=\frac{1}{kT}
+\end{equation}
+So che
+\begin{equation}
+E_{Planck} = u(\nu)h\nu
+\end{equation}
+Quindi:
+\begin{equation}
+\frac{\partial E}{\partial \beta} = (h\nu)\frac{1}{\left( e^{h\nu/kT}-1 \right)^2} (h\nu) e^{h\nu/kT} 
+\end{equation}
+Noto che:
+\begin{equation}
+e^{h\nu/kT} = 1 + n(v) \qquad \text{con} \qquad n(\nu) = \frac{1}{e^{h\nu/kT}-1}
+\end{equation}
+Studiamo le fluttuazioni di energia nei limiti di alte e basse temperature:
+
+\subparagraph{Alte T}
+\begin{align}
+& \frac{kT}{h\nu} \gg 1 \\ \nonumber
+& \Delta E^2 \left[ u(\nu) \right]^2 \approx (kT)^2
+\end{align}
+Cioè le fluttuazioni sono proporzionali al quadrato dell'energia
+
+\subparagraph{Basse T}
+\begin{align}
+& \frac{kT}{h\nu} \ll 1 \\ \nonumber
+& \Delta E^2 = (h\nu)^2 e^{-h\nu/kT} 
+\end{align}
+Si può osservare che le fluttuazioni dell'eenrgia dipendono da $ kT $ come n particelle non interagenti che seguono la statistica di Poisson.
+
+Tutto questo per dire che nel primo caso le fluttuazioni, andando come il quadrato dell'energia, quindi come un'intensità di un'onda, evidenziano il fenomeno ondulatorio della luce.
+Nel secondo caso, invece, la luce si comporta come n delle particelle non interagenti contenute in un volume $ V $
+
+(Inserire la parte sui calcoletti di Poisson)
+
+Planck con il quanto descrive la natura ondulatoria e particellare della luce (e questa era una cosa sconvolgente ai tempi).
+
+\subsection{Effetto Fotoelettrico}
+Già trattato in fisica III. Quello che c'è da ricordare è che secondo la fisica classica, il tempo necessario per una sorgente di luce a far uscire un elettrone esterno dal suo atomo era nell'ordine di $ 10^5 $ s, in totale disaccordo con le evidenze sperimentali.
+
+\subsection{Effetto Compton}
+Anche qua già fatto. Bisogna ricordare che i calcoli sono stati fatti utilizzando la cinematica relativista e il momento di un foto $ p = E/c $ anche se non sappiamo bene il perchè. A volte può succedere che il fotone colpisca un elettrone interno e faccia rinculare l'atomo.
+
+\subsection{Esperimento di Nichols Hull}
+\'E l'esperimento che dimostrò l'esistenza della pressione di radiazione che si otteneva utilizzando il vettore di Poyinting (e quindi derivante dalle equazioni di Maxwell).
+L'esperimento è simile alla bilancia di torsione di Coloumb o di Cavendish, solo che vi sono due palette: una completamente nera e l'altra a specchio.
+Per la conservazione dell'impulso
+
+Tornando al corpo nero, le stelle sono un'approssimazione sufficientemente buona di corpo nero. Il picco dello spettro del Sole è di $ 500nm 0$ che coincide con il picco della sensibilità dell'occhio umano (L'evoluzione non è un fenomeno casuale).
+Qual  è il miglior corpo nero in assoluto che si possa immaginare? L'universo. Il suo picco è a $ 2.7 K $ del residuo del big bang.
+
+\subsection{De Broglie}
+De Broglie ipotizza che tutta la materia avesse un comportamento ondulatorio. Quello che fa è prendere l'ipotesi di Planck ed estenderla. Associa quindi ad ogni particella di momento $ p $ una lunghezza d'onda:
+
+\begin{equation}
+\lambda = \frac{h}{p}
+\end{equation}
+L'ipotesi fu subito verificata dall'esperimento di Bragg e dall'esperimento di Davisson e Germer. Scrivo velocemente in cosa consistono. Bragg utilizza cristalli come reticoli di diffrazione su cui fa incidere un fascio di raggi X. SI ricava la formula:
+
+\begin{equation}
+\lambda = 2d\sin\theta
+\end{equation}
+Procedendo con un fascio di elettroni di cui è nota l'energia cinetica è possibile ricavare la lunghezza d'onda dall'ipotesi di De Broglie e confrontarla con quella che si ottiene dall'esperimento di Bragg:
+
+\begin{align}
+\lambda &= \frac{h}{p} = \frac{h}{mv} \\ \nonumber
+E &= \frac{1}{2} m v^2 \\ \nonumber
+\lambda &= \frac{h}{m \sqrt{2E/m}}
+\end{align}
+Dagli esperimenti risultò che
+
+\begin{align}
+& \lambda_{Bragg} &= 1.65 A^{\circ} \\ \nonumber
+& \lambda_{De Broglie} &= 1.63 A^{\circ} 
+\end{align}
+
+\subsection{Stabilità dell'atomo}
+Un altro problema della fisica classica era quello della stabilità dell'atomo. Era sicuramente noto che il modello a panettone di Thomson fosse errato ed era ben accettata la teoria dell'esistenza del nucleo atomico. Il modello atomico accettato era quello di Rutherford. Ciò che non ci si riusciva a spiegare era come l'atomo potesse essere stabile visto che che gli elettroni girando intorno al nucleo ed essendo particelle cariche, irraggiano energia. Consultare il Jackson per ricavare la formula, ma si ottiene che l'energia persa nel tempo da un elettrone di carica $ e $, di accelerazione $ a $ è data da:
+
+\begin{equation}
+\frac{dE}{dt}  = \frac{2}{3} \frac{e^2a^2}{c^3} \left(\frac{1}{4\pi\epsilon_0}\right)
+\end{equation}
+Il moto è circolare uniforme e quindi l'unico contributo della forza centripeta è dato dall'interazione columbiana tra l'elettrone è il nucleo. Nel caso più semplice dell'atomo di Idrogeno:
+
+\begin{align}
+\frac{mv^2}{r} &= \frac{e^2}{r^2}\frac{1}{4\pi\epsilon_0} \\ \nonumber
+ a &= \frac{e^2}{mr^2}\frac{1}{4\pi\epsilon_0} \\ \nonumber
+\frac{dE}{dt} &= \frac{2}{3}\frac{e^6}{m^2c^3r^4}\left(\frac{1}{4\pi\epsilon_0}\right)^3
+\end{align}
+Immagino che tutta l'energia venga persa nel fenomeno in gioco. 
+Domanda: come so che l'energia cinetica dell'elettrone non è relativistica? Risposta: La relatività inizia ad avere un aspetto rilevante quando l'energia cinetica è confrontabile con l'energia di massa a riposo della particella. In questo caso l'energia di legame dell'elettrone è nell'ordine del $ eV $ mentre la massa dell'elettrone è circa $ 511 keV $ quindi posso stare tranquillo che l'energia non è relativistica.
+Come ben noto, l'energia cinetica di una particella è:
+
+\begin{equation}
+K = \frac{1}{2}mv^2
+\end{equation}
+Quindi il tempo che l'elettrone impiega ad irradiare tuta la sua energia è
+\begin{equation}
+t = \frac{K}{dE/dt} = \frac{1}{2}\frac{e^2}{r}\frac{1}{4\pi\epsilon_0}\frac{3}{2}\frac{m^2c^3r^4}{e^6}(4\pi\epsilon_0)^3 \approx 10^{-10} s
+\end{equation}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
